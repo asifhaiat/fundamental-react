@@ -5,48 +5,58 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router></Router>
-      <Laptop></Laptop>
-      <Book></Book>
-      <Phone></Phone>
+      <Router name="TP Link" brand="TP Link" paragraph="Most used router all over Bangladesh"></Router>
+      <Laptop name="Mac Book" brand="Apple" paragraph="Most valuable laptop all over the world"></Laptop>
+      <Book name="Iblisher Jibon Kahini" authorName="Monowara Begum" paragraph="This Book contain Eblish Jinn History"></Book>
+      <Phone name="Apple 13 pro Max" brand="Apple" paragraph="Most valuable phone all over the world"></Phone>
     </div>
   );
 }
-
-function Router() {
+// similar in loop different in data using props parameter
+function Router(props) {
+  /* this console return object
+  console.log(props); */
   return (
     <div className='container'>
-      <h3>Name: Mi Router 4c</h3>
-      <h4>Brand: Xiaomi</h4>
-      <p>This router has four antenna and it's performance is very good.</p>
+      <h3>{props.name}</h3>
+      <h4>{props.brand}</h4>
+      <p>{props.paragraph}</p>
     </div>
   )
 }
-function Laptop(){
+// similar in loop different in data using props parameter
+function Laptop(props){
+  /* this console return object
+  console.log(props); */
   return (
     <div className='container1'>
-      <h3>Name: HP ProBook 450 G4</h3>
-      <h4>Brand: HP</h4>
-      <p>i used in this laptop 4 year's and it's performance really satisfied to me.</p>
+      <h3>{props.name}</h3>
+      <h4>{props.brand}</h4>
+      <p>{props.paragraph}</p>
     </div>
   )
 }
-
-function Book(){
+// similar in loop different in data using props parameter
+function Book(props){
+  /* this console return object
+  console.log(props); */
   return (
     <div className='container2'>
-      <h3>Name: Islamer Etihash</h3>
-      <h4>Author Name: Dr. Muhammad Ibrahim Ash-shariki</h4>
-      <p>This book contain Islamic History</p>
+      <h3>{props.name}</h3>
+      <h4>{props.authorName}</h4>
+      <p>{props.paragraph}</p>
     </div>
   )
 }
-function Phone(){
+// similar in loop different in data using props parameter
+function Phone(props){
+  /* this console return object
+  console.log(props); */
   return (
     <div className='container3'>
-      <h3>Name: Vivo Y93</h3>
-      <h4>Brand: Vivo</h4>
-      <p>I used this phone 3year's and i really satisfied to this phone</p>
+      <h3>{props.name}</h3>
+      <h4>{props.brand}</h4>
+      <p>{props.paragraph}</p>
     </div>
   )
 }
